@@ -2,10 +2,8 @@
   "name": "lab1script",
   "version": "1.0.0",
   "scripts": {
-    "start:api": "cross-env NAME=Anton NODE_ENV=api node api/app.js",
-    "start:proxy": "cross-env NODE_ENV=proxy node proxy/app.js",
-    "start:proxy-docker": "cross-env API_URL=http://api:3000 NODE_ENV=proxy node proxy/app.js",
-    "start:server": "node server/app.js",
+    "start:master": "node master.js",
+    "start:worker": "node worker.js",
     "test": "cross-env NODE_ENV=test jest"
   },
   "jest": {
@@ -21,6 +19,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jest": "^25.1.0",
+    "js": "^0.1.0",
     "supertest": "^4.0.2"
   },
   "devDependencies": {
