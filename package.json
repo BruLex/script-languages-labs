@@ -2,8 +2,9 @@
   "name": "lab1script",
   "version": "1.0.0",
   "scripts": {
-    "start:api": "npx cross-env NAME=Anton NODE_ENV=api node api/app.js",
-    "start:proxy": "npx cross-env NODE_ENV=proxy node proxy/app.js",
+    "start:api": "cross-env NAME=Anton NODE_ENV=api node api/app.js",
+    "start:proxy": "cross-env NODE_ENV=proxy node proxy/app.js",
+    "start:proxy-docker": "cross-env API_URL=http://api:3000 NODE_ENV=proxy node proxy/app.js",
     "test": "cross-env NODE_ENV=test jest"
   },
   "jest": {
@@ -14,15 +15,11 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "child_process": "^1.0.2",
     "convict": "^5.2.0",
     "cross-env": "^7.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "factory-girl": "^5.0.4",
     "jest": "^25.1.0",
-    "mysql2": "^2.1.0",
-    "sequelize": "^5.21.5",
     "supertest": "^4.0.2"
   },
   "devDependencies": {
