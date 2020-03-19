@@ -17,3 +17,15 @@ services:
         condition: on-failure
     ports:
       - "3001:3001"
+
+  database:
+    image: lab-app-database
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    volumes:
+    - db_volume:/var/lib/mysql
+volumes:
+  db_volume:
+    external: true

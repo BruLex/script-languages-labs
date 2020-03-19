@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 RUN mkdir config
 
 COPY proxy ./proxy
-COPY config/proxy.json config/
+COPY config/proxy-container.json config/
 COPY config.js ./
 COPY package*.json ./
 

@@ -7,9 +7,11 @@ goto :eof
 :build
     docker build -t "lab-app-api" -f ./api/Dockerfile . 
     docker build -t "lab-app-proxy" -f ./proxy/Dockerfile .
+    docker build -t "lab-app-database" -f ./database/Dockerfile .
 goto :eof
 
 :deploy
+        docker volume create db_volume
         docker swarm init
         docker stack deploy -c docker-compose.yml lab-app
 goto :eof

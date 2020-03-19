@@ -1,9 +1,4 @@
-Intall dependencies:
-```bash
-$ npm install
-```
-
-To build container use ``app-control.sh`` script.
+To build container use ``app-control`` script.
 ```bash
 Usage: ./app-control COMMAND
 Options:

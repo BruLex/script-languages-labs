@@ -3,6 +3,7 @@
 build() {
     docker build -t "lab-app-api" -f ./api/Dockerfile . 
     docker build -t "lab-app-proxy" -f ./proxy/Dockerfile .
+    docker build -t "lab-app-database" -f ./proxy/Dockerfile .
 }
 
 deploy() {
@@ -19,7 +20,7 @@ stop() {
 help_info() {
     echo "Usage: ./app-control COMMAND"
     echo "Options:"
-    echo "    --build     Build app"
+    echo "  --build     Build app"
     echo "	--deploy    Start app"
     echo "	--stop      Stop app"
 }
