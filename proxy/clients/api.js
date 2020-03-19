@@ -1,4 +1,4 @@
-const { makeHttpGetRequest } = require('../services/api.service');
+const { makeHttpGetRequest } = require('../services/api-service');
 
 module.exports = {
     getRoot:  () => makeHttpGetRequest('/')
