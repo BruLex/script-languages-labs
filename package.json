@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "cross-env NAME=Anton node index.js",
-    "test": "jest"
+    "server": "npx cross-env node index.js",
+    "test": "npx jest"
   },
   "jest": {
     "testEnvironment": "node",
