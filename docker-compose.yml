@@ -1,6 +1,6 @@
 version: "3"
 services:
-  api:
+  lab-app-api:
     image: lab-app-api
     deploy:
       replicas: 1
@@ -9,7 +9,7 @@ services:
     ports:
       - "3000:3000"
 
-  proxy:
+  lab-app-proxy:
     image: lab-app-proxy
     deploy:
       replicas: 1
@@ -18,8 +18,8 @@ services:
     ports:
       - "3001:3001"
 
-  database:
-    image: lab-app-database
+  lab-app-database:
+    image: mariadb:10.3.9
     deploy:
       replicas: 1
       restart_policy:

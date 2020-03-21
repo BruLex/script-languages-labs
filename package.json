@@ -4,7 +4,7 @@
   "scripts": {
     "start:api": "npx cross-env NAME=Anton NODE_ENV=api node api/app.js",
     "start:proxy": "npx cross-env NODE_ENV=proxy node proxy/app.js",
-    "start:proxy-docker": "npx cross-env NODE_ENV=proxy-container node proxy/app.js",
+    "start:proxy-container": "npx cross-env NODE_ENV=proxy-container node proxy/app.js",
     "prepare-test-env": "node proxy/services/database/models/createDB.js",
     "test": "npm run prepare-test-env && npx cross-env NODE_ENV=test jest"
   },

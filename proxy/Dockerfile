@@ -12,4 +12,4 @@ COPY package*.json ./
 EXPOSE 3001
 
 RUN npm install
-CMD npm run start:proxy-docker
+CMD npm run start:proxy-container
