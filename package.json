@@ -4,7 +4,7 @@
   "scripts": {
     "start:api": "npx cross-env NAME=Anton NODE_ENV=api node api/app.js",
     "start:proxy": "npx cross-env NODE_ENV=proxy node proxy/app.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "npx cross-env NODE_ENV=test jest"
   },
   "jest": {
     "testEnvironment": "node",
